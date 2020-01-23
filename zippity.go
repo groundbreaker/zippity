@@ -10,7 +10,7 @@ import (
 
 // Version retuns the SemVer for this library.
 func Version() string {
-	return "v1.0.0"
+	return "v1.0.1"
 }
 
 // File models the data that will be included in a Zipfile.

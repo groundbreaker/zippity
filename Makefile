@@ -8,7 +8,7 @@ default:
 	@ mmake help
 
 # init project
-init: env
+init:
 	@ go mod vendor
 
 # remove build assets
