@@ -22,19 +22,19 @@ import (
 
 func main() {
   // Read a file
-	pdf := zippity.ReadFile("test.pdf", "fine.pdf")
+  pdf := zippity.ReadFile("test.pdf", "fine.pdf")
 
   // Or create one from a []byte
-	txt := &zippity.File{
-		Name: "test.txt",
-		Body: []byte("Already have the bytes? Then, create a literal File."),
-	}
+  txt := &zippity.File{
+    Name: "test.txt",
+    Body: []byte("Already have the bytes? Then, create a literal File."),
+  }
 
   // Create a new Zipfile
-	zf := zippity.New()
+  zf := zippity.New()
 
   // Chain as many Add
-	zf.Add(pdf).Add(txt)
+  zf.Add(pdf).Add(txt)
 
   zip := zf.Done() // returns the Zipfile as []byte
 
