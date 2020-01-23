@@ -10,7 +10,7 @@ Complete [onboarding](https://github.com/groundbreaker/codex/wiki/Onboarding), t
 
     git clone groundbreaker/zippity ${GB_DIR}/zippity
     cd ${GB_DIR}/zippity
-    AWS_PROFILE=gb make init
+    make init
 
 ## Test it
 
@@ -27,4 +27,3 @@ Complete [onboarding](https://github.com/groundbreaker/codex/wiki/Onboarding), t
     make help
 
 ---
-
