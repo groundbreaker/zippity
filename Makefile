@@ -1,5 +1,5 @@
 include .env
-.PHONY := default init test test-file cb release env env-push
+.PHONY := default init clean test test-file cb release env env-push
 .DEFAULT_GOAL = default
 
 AWS ?= aws --profile ${AWS_PROFILE}
@@ -13,16 +13,16 @@ default:
 init: env
 	@ go mod vendor
 
-# run tests
-test:
-	@ ${GOTEST} ./...
-
-test-file:
-	@ ${GOTEST} -run $(filter-out $@, $(MAKECMDGOALS))
-
 # remove build assets
 clean:
-	@ rm -rf bin/${FUNC}
+	@ rm -f test.zip
+
+# run tests
+test: clean
+	@ ${GOTEST} ./...
+
+test-file: clean
+	@ ${GOTEST} -run $(filter-out $@, $(MAKECMDGOALS))
 
 # create release VERSION on github
 #
