@@ -1,4 +1,5 @@
-# zippity
+# :suspension_railway: zippity
+
 Creates Zip Files, quickly.
 
 ---
@@ -7,21 +8,19 @@ Creates Zip Files, quickly.
 
 Complete [onboarding](https://github.com/groundbreaker/codex/wiki/Onboarding), then:
 
-    git clone groundbreaker/REPOS_NAME ${GB_DIR}/REPOS_NAME
-    cd ${GB_DIR}/REPOS_NAME
-    make init
-
-## Build it
-
-    make build
+    git clone groundbreaker/zippity ${GB_DIR}/zippity
+    cd ${GB_DIR}/zippity
+    AWS_PROFILE=gb make init
 
 ## Test it
 
     make test
 
-## Deploy It
+## Release It
 
-    make deploy
+    make release VERSION
+
+- `VERSION` should begin with a `v` and be in SemVer format, e.g. `v1.0.0`.
 
 ## Other Commands
 
@@ -29,6 +28,3 @@ Complete [onboarding](https://github.com/groundbreaker/codex/wiki/Onboarding), t
 
 ---
 
-## AWS Resources
-
-  - LINK
